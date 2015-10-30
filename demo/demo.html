@@ -1,2 +1,68 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <script src="//cdn.bootcss.com/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <script src="../angular-promise-button.min.js"></script>
+    <style>
+        .btn{
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .btn-success{
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+        }
+        .btn-disabled{
+            background-color: #ccc;
+            border-color: #ccc;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="demoCtrl">
+        <button type="button" class="btn btn-success" promise-button pb-click="pe()" pb-completed="isCompleted">Click</button>
+        
+        <p id="r"></p>
+    </div>
+    
+    <script>
+        angular.module('demo',[
+            'promiseButton'
+        ]).controller('demoCtrl',demoController);
+        
+        demoController.$inject = ['$scope','$http','$timeout'];
+        
+        function demoController($scope,$http,$timeout){
+            
+            $scope.pe = function(){
+                
+                document.getElementById('r').innerHTML += 'clicked,'
+                
+                $http.get('data.json').then(function(data){
+                    
+                    $timeout(function(){
+                        console.log('Complete!');
+                        $scope.isCompleted = true;
+
+                    },3000);
+                });
+            };
+        }
+    </script>
+</body>
 </html>

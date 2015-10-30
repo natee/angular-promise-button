@@ -13,7 +13,7 @@
             
             var started = false, // is click event start
                 
-                disabledClass = 'bdp-btn-disabled', // class used in css file to define the style of button
+                disabledClass = 'btn-disabled', // class used in css file to define the style of button
                 
                 start = function () {
                     started = true;

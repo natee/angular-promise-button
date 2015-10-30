@@ -4,13 +4,14 @@ Promise button directive for AngularJS.
 
 ## Installation
 
-bower install angular-promise-button --save
 
 ## Usage
 
 Inject module into you app:
 
+```javascript
 angular.module('YourAwesomeApp', ['promiseButton']);
+```
 
 Use it at a directive:
 
