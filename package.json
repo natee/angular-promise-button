@@ -1,0 +1,30 @@
+{
+  "name": "angular-promise-button",
+  "version": "1.0.0",
+  "description": "Promise button directive for AngularJS",
+  "main": "angular-promise-button.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natee/angular-promise-button.git"
+  },
+  "keywords": [
+    "angular",
+    "promise",
+    "button"
+  ],
+  "author": "natee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natee/angular-promise-button/issues"
+  },
+  "homepage": "https://github.com/natee/angular-promise-button#readme",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-contrib-uglify": "^0.6.0"
+  }
+}
